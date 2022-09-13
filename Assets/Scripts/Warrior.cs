@@ -23,5 +23,9 @@ public class Warrior : MonoBehaviour
         {
             Anim.SetBool("Andar", false);
         }
+        else
+        {
+            Anim.SetBool("Andar", true);
+        }
     }
 }
