@@ -6,6 +6,7 @@ public class Warrior : MonoBehaviour
 {
     private Rigidbody2D Corpo;
     private Animator Anim;
+    public GameObject MeuAtk;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,5 +43,14 @@ public class Warrior : MonoBehaviour
             Anim.SetTrigger("Attack");
         }
 
+    }
+    public void AtivarATK()
+    {
+        MeuAtk.SetActive(true);
+    }
+
+    public void DesativarATK()
+    {
+        MeuAtk.SetActive(false);
     }
 }
