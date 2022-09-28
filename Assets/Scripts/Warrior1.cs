@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Warrior : MonoBehaviour
+public class Warrior1 : MonoBehaviour
 {
     private Rigidbody2D Corpo;
     private Animator Anim;
@@ -47,12 +47,12 @@ public class Warrior : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(qtdPulo > 0)
+            if (qtdPulo > 0)
             {
                 qtdPulo--;
                 jump();
             }
-            
+
         }
 
     }
@@ -66,13 +66,13 @@ public class Warrior : MonoBehaviour
         MeuAtk.SetActive(false);
     }
 
-    private void jump()
+    void jump()
     {
         Corpo.AddForce(Vector2.up * 330);
     }
     private void OnTriggerStay2D(Collider2D colidiu)
     {
-        if(colidiu.gameObject.tag == "Chao")
+        if (colidiu.gameObject.tag == "Chao")
         {
             qtdPulo = 2;
         }
